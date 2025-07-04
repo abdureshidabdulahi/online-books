@@ -1,0 +1,18 @@
+.searh-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.library-intro{
+color: white;
+font-family: serif;
+font-size: 16px;
+ margin-left: auto;
+width: fit-content;
+}
+.input{
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    margin-left: auto;
+}
