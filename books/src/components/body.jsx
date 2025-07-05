@@ -6,21 +6,23 @@ function Body(){
     const [books,setbooks] =useState([])
     useEffect(()=>{
        
-         fetch('https://openlibrary.org/search.json?q=education&page=4')
+         fetch('https://openlibrary.org/search.json?q=first_publish_year:[2016 TO *]&page=1')
         .then(response=>response.json())
         .then((data)=>{
             console.log(data.docs)
          setbooks(data.docs)
        
     })
-    
-       
     },[])
+     const filteredByImage = books.filter((book)=>book.cover_i!==undefined)
+
+    
     return(
         <div className="body-container">
            
-            {books.map((book)=>(
+            {filteredByImage.slice(0,34).map((book,index)=>(
                 <div className='books' 
+                 key={index}
                 style={{
                     backgroundImage:`url(https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg)`,
                     width:'150px',
