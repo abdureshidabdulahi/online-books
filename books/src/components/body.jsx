@@ -14,15 +14,18 @@ function Body(){
        
     })
     },[])
-     const filteredByImage = books.filter((book)=>book.cover_i!==undefined)
+     const filteredByImage = books.filter((book)=>book.cover_i!==undefined && book.ebook_access != 'no_ebook')
 
     
+
+     
     return(
         <div className="body-container">
            
             {filteredByImage.slice(0,34).map((book,index)=>(
-                <div className='books' 
-                 key={index}
+              <a  key={index} href={`https://archive.org/metadata/[${book.ia[0]}]`} target="_blank" rel="noopener noreferrer">
+                  <div className='books' 
+                
                 style={{
                     backgroundImage:`url(https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg)`,
                     width:'150px',
@@ -32,6 +35,7 @@ function Body(){
                 >
                 
                 </div>
+              </a>
             ))
 
             
