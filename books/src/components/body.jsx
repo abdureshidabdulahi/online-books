@@ -23,7 +23,7 @@ function Body(){
         <div className="body-container">
            
             {filteredByImage.slice(0,34).map((book,index)=>(
-              <a  key={index} href={`https://archive.org/metadata/[${book.ia[0]}]`} target="_blank" rel="noopener noreferrer">
+              <a  key={index} href={`https://archive.org/details/${book.title}`} target="_blank" rel="noopener noreferrer">
                   <div className='books' 
                 
                 style={{
