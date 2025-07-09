@@ -1,10 +1,8 @@
 import image1 from '../assets/kimberly-farmer-lUaaKCUANVI-unsplash.jpg'
 import './header.css'
 import SearchIcon from '@mui/icons-material/Search';
+import Handled from './handleclich';
 function Header(){
-    function handleClick(){
-
-    }
     return(
         <div className="header-container">
             <div className="searh-div"
@@ -33,7 +31,7 @@ function Header(){
         
         }}/>
     <input type='text' placeholder='search here your favorite book' />
-    <button onClick={()=>handleClick()}>
+    <button onClick={()=> <Handled />}>
         <SearchIcon style={{fontSize:'35px',color:'white'}}/>
     </button>
 </div>

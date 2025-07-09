@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Handled({filteredByImage}){
+function Handled(){
     const [books,setbooks]=useState([])
    useEffect(()=>{
      fetch('https://openlibrary.org/search.json?q=first_publish_year:[2016 TO *]&page=1')
@@ -10,12 +10,12 @@ function Handled({filteredByImage}){
     })
    },[])
     
-   
+   const filteredBooka = books.filter((book)=>book.cover_i !=undefined)
     return(
         
         <div className="handle-container">
            {
-            books.map(book=>(
+            filteredBooka.map(book=>(
                  <div className="photof-book">
                 <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` } width={300} height={200} />
             </div>
