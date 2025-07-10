@@ -1,7 +1,7 @@
 import image1 from '../assets/kimberly-farmer-lUaaKCUANVI-unsplash.jpg'
 import './header.css'
 import SearchIcon from '@mui/icons-material/Search';
-import Handled from './handleclich';
+ 
 function Header(){
     
     return(

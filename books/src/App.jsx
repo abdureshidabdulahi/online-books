@@ -3,15 +3,25 @@ import Header from "./components/header";
 import Body from './components/body';
 import Footer from './components/footer';
 import { Route, Routes } from 'react-router-dom';
+import Click from './components/clickedBodyPic';
  
 function App(){
         return(
         <div className="container-all">
-        <Header/>
+       <Routes>
+  <Route
+    path="/"
+    element={
+      <>
+        <Header />
         <Body />
-        <Footer/>
-       
-         
+        <Footer />
+      </>
+    }
+  />
+  <Route path="/click/:coverId/:title" element={<Click />} />
+</Routes>
+
         </div>
         );
 }
