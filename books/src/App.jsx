@@ -19,7 +19,7 @@ function App(){
       </>
     }
   />
-  <Route path="/click/:coverId/:title" element={<Click />} />
+  <Route path="/click/:cover_i/:title" element={<Click />} />
 </Routes>
 
         </div>
