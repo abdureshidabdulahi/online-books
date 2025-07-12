@@ -2,7 +2,8 @@
 import { useEffect, useState } from 'react';
 import './body.css'
 import { Link } from 'react-router-dom';
-function Body(){
+ 
+function Body({cover_i}){
     const [books,setbooks] =useState([])
     useEffect(()=>{
        
@@ -23,7 +24,7 @@ function Body(){
         <div className="body-container">
            
             {filteredByImage.slice(0,34).map((book,index)=>(
-              <Link  key={index} state={{book}} target="_blank"   to={`/click/${book.cover_i}/${encodeURIComponent(book.title)}`}>
+              <Link  key={index}  target="_blank"  to={`/click/${book[cover_i]}/${encodeURIComponent(book.title)}`} >
                   <div className='books' 
                 
                 style={{
