@@ -1,28 +1,19 @@
 import './App.css'
 import Header from "./components/header";
-import Body from './components/body';
+ 
 import Footer from './components/footer';
 import { Route, Routes } from 'react-router-dom';
-import Click from './components/clickedBodyPic';
+ 
+import ParentFetch from './components/parentFetch';
  
 function App(){
         return(
-        <div className="container-all">
-       <Routes>
-  <Route
-    path="/"
-    element={
-      <>
-        <Header />
-        <Body />
+        <>
+          <Header />
+        <ParentFetch />
         <Footer />
-      </>
-    }
-  />
-  <Route path="/click/:cover_i/:title" element={<Click />} />
-</Routes>
+        </>
 
-        </div>
         );
 }
 export default App;
